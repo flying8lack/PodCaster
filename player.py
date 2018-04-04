@@ -1,4 +1,4 @@
-#from playsound import playsound
+from playsound import playsound
 import os
 import wx
 
@@ -24,7 +24,7 @@ while 1:
         if name == "EXIT":
             exit()
         else:
-            pass#playsound("Wallet/"+name+".mp3", False)
+            playsound("Wallet/"+name, False)
     except Exception as e:
         print(str(e))
     
