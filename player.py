@@ -16,7 +16,7 @@ app = wx.App()
 panel = wx.Panel()
 while 1:
    
-    Sound = wx.TextEntryDialog(panel, 'type mp3 name(must add extension): ','mp3')
+    Sound = wx.TextEntryDialog(panel, 'type mp3 name(must add extension): ','the file')
     Sound.ShowModal()
     name = Sound.GetValue()
     Sound.Destroy()
