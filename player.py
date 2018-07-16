@@ -6,9 +6,10 @@ if os.path.exists("/Wallet") == False:
     try:
         os.system("mkdir Wallet")
     except:
-        print("File found!")
+        print("Error!")
+        exit(1)
 else:
-    pass
+    print("File found!")
 
 #Play the Code
 app = wx.App()
@@ -16,7 +17,7 @@ app = wx.App()
 panel = wx.Panel()
 while 1:
    
-    Sound = wx.TextEntryDialog(panel, 'type mp3 name(must add extension): ','the file')
+    Sound = wx.TextEntryDialog(panel, 'type file name(must add extension): ','the file')
     Sound.ShowModal()
     name = Sound.GetValue()
     Sound.Destroy()
