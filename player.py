@@ -5,17 +5,15 @@ import wx
 if os.path.exists("/Wallet") == False:
     try:
         os.mkdir("Wallet")
-    except:
-        print("Error!")
+    except FileExistsError:
+        print("Error, directory already exists.")
         exit(1)
-else:
-    print("File found!")
 
 #Play the Code
 app = wx.App()
 
 panel = wx.Panel()
-while 1:
+while True:
    
     Sound = wx.TextEntryDialog(panel, 'type file name(must add extension): ','the file')
     Sound.ShowModal()
