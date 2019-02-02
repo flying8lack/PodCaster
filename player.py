@@ -4,7 +4,7 @@ import wx
 
 if os.path.exists("/Wallet") == False:
     try:
-        os.system("mkdir Wallet")
+        os.mkdir("mkdir Wallet")
     except:
         print("Error!")
         exit(1)
